@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_21_145428) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_07_030154) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -40,6 +40,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_21_145428) do
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "year_id"
+    t.index ["year_id"], name: "index_students_on_year_id"
   end
 
   create_table "users", force: :cascade do |t|
